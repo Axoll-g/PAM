@@ -1,4 +1,4 @@
-package com.example.avatarapp
+package com.example.tugaspam_1
 
 import android.content.Intent
 import android.os.Bundle
@@ -17,13 +17,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
-import com.example.avatarapp.ui.theme.AvatarAppTheme
+import com.example.tugaspam_1.ui.theme.TugasPAM_1Theme
 
 class RegistrationActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AvatarAppTheme {
+            TugasPAM_1Theme {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     RegistrationScreen()
                 }

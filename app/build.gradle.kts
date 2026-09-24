@@ -1,14 +1,14 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.android") version "1.9.22"
 }
 
 android {
-    namespace = "com.example.avatarapp"
+    namespace = "com.example.tugaspam_1"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.avatarapp"
+        applicationId = "com.example.tugaspam_1"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

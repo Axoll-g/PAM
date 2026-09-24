@@ -1,4 +1,4 @@
-package com.example.avatarapp
+package com.example.tugaspam_1
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,13 +13,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
-import com.example.avatarapp.ui.theme.AvatarAppTheme
+import com.example.tugaspam_1.ui.theme.*
 
 class LoginActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AvatarAppTheme {
+            // Sesuaikan nama Theme dengan file di folder ui.theme (biasanya TugasPAM_1Theme atau AvatarAppTheme)
+            TugasPAM_1Theme {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     LoginScreen()
                 }
@@ -56,7 +57,6 @@ fun LoginScreen() {
         )
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Password ditampilkan sebagai blinded text (masked) memakai PasswordVisualTransformation
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },

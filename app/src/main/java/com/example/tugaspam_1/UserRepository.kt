@@ -1,4 +1,4 @@
-package com.example.avatarapp
+package com.example.tugaspam_1
 
 data class RegisteredUser(
     val firstName: String,
