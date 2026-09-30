@@ -29,17 +29,18 @@ class ProfileActivity : ComponentActivity() {
 @Composable
 fun ProfileScreen() {
     val context = LocalContext.current
+    var showAvatarDialog by remember { mutableStateOf(false) }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(24.dp),
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterVertically),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(text = "Halaman Profile", style = MaterialTheme.typography.headlineMedium)
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(12.dp))
 
         Button(
             onClick = {
@@ -60,5 +61,17 @@ fun ProfileScreen() {
         ) {
             Text("Lihat Avatar")
         }
+
+        // Tombol baru: Avatar tampil sebagai dialog di atas halaman Profile
+        Button(
+            onClick = { showAvatarDialog = true },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Lihat Avatar (Dialog)")
+        }
+    }
+
+    if (showAvatarDialog) {
+        AvatarDialog(onDismiss = { showAvatarDialog = false })
     }
 }

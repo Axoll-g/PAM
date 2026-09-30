@@ -8,8 +8,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AvatarApp">
 
+        <!-- Home Screen: satu satunya Activity yang menjadi launcher -->
         <activity
-            android:name=".RegistrationActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AvatarApp">
             <intent-filter>
@@ -17,6 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AvatarApp" />
 
         <activity
             android:name=".LoginActivity"
